@@ -1,0 +1,10 @@
+lastUpgrade=00932
+proj.AppId=550919324986
+android.SetupDone=true
+and.BundleId=com.Davidesq.Game1
+proj.classDir=Assets
+proj.ConstantsClassName=RapidRails.GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3cstring+name%3d%22app_id%22%3e550919324986%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22package_name%22%3ecom.Davidesq.Game1%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_15%22%3eCgkIuornqoQQEAIQAg%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_50%22%3eCgkIuornqoQQEAIQAw%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_100%22%3eCgkIuornqoQQEAIQBA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_150%22%3eCgkIuornqoQQEAIQBQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_200%22%3eCgkIuornqoQQEAIQBg%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_400%22%3eCgkIuornqoQQEAIQBw%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_700%22%3eCgkIuornqoQQEAIQCA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_1000%22%3eCgkIuornqoQQEAIQCQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_5_games.%22%3eCgkIuornqoQQEAIQCg%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_20_games.%22%3eCgkIuornqoQQEAIQCw%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22leaderboard_top_scores%22%3eCgkIuornqoQQEAIQAA%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d%0a
+and.ClientId=
+proj.requireGPlus=false
+proj.pluginVersion=0.9.32

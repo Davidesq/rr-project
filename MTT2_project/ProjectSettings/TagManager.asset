@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - mob
+  - Manager
+  - smoke
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - sprites
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2736855927
+    locked: 0
+  - name: railroad
+    uniqueID: 2341312853
+    locked: 0
+  - name: sprites
+    uniqueID: 407884821
+    locked: 0
+  - name: ui
+    uniqueID: 3818453373
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: smoke
+    uniqueID: 1900292457
+    locked: 0
