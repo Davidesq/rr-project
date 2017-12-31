@@ -60,12 +60,17 @@ public class TrainMovement : MonoBehaviour {
                 if (touch.deltaPosition.x > 0) //a la derecha
                 {
                     gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    
 
-                    //smokeR.SetActive(true); smokeL.SetActive(false);
+                    //smokeR.GetComponent<ParticleSystem>().enableEmission = true;
+                    ParticleSystem psR = smokeR.GetComponent<ParticleSystem>();
+                    var em = psR.emission;
+                    em.enabled = true;
 
-                    smokeR.GetComponent<ParticleSystem>().enableEmission = true;
-                    smokeL.GetComponent<ParticleSystem>().enableEmission = false;
-
+                    //smokeL.GetComponent<ParticleSystem>().enableEmission = false;
+                    ParticleSystem psL = smokeR.GetComponent<ParticleSystem>();
+                    var emL = psR.emission;
+                    em.enabled = false;
                 }
                 else if (touch.deltaPosition.x < 0) //a la izquierda
                 {
