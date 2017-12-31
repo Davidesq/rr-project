@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using ChartboostSDK;
+//using ChartboostSDK;
 
 public class TrainMovement : MonoBehaviour {
     //Transform cashedTransform;
@@ -26,7 +26,7 @@ public class TrainMovement : MonoBehaviour {
     public GameObject smokeL, smokeR;
     
     void Start () {
-        Chartboost.cacheInterstitial(CBLocation.GameOver);
+        //Chartboost.cacheInterstitial(CBLocation.GameOver);
 
         screen = new Vector2(Screen.width, Screen.height);
 
@@ -107,8 +107,8 @@ public class TrainMovement : MonoBehaviour {
 
             Debug.Log("true");
 
-            if(Chartboost.hasInterstitial(CBLocation.GameOver) && times % 3 == 0)
-                Chartboost.showInterstitial(CBLocation.GameOver);
+            //if(Chartboost.hasInterstitial(CBLocation.GameOver) && times % 3 == 0)
+            //    Chartboost.showInterstitial(CBLocation.GameOver);
         }
     }
 

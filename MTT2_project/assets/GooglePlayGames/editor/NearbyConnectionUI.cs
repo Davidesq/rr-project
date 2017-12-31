@@ -102,14 +102,22 @@ namespace GooglePlayGames.Editor
                 GPGSUtil.EnsureDirExists("Assets/Plugins/Android");
 
                 // Generate AndroidManifest.xml
-                GPGSUtil.GenerateAndroidManifest(
-                    GPGSProjectSettings.Instance.GetBool(GPGSUtil.REQUIREGOOGLEPLUSKEY)
-                );
+                GPGSUtil.GenerateAndroidManifest();
 
-                // refresh assets, and we're done
-                AssetDatabase.Refresh();
                 GPGSProjectSettings.Instance.Set(GPGSUtil.NEARBYSETUPDONEKEY, true);
                 GPGSProjectSettings.Instance.Save();
+
+                // Resolve the dependencies
+                Google.VersionHandler.VerboseLoggingEnabled = true;
+                Google.VersionHandler.UpdateVersionedAssets(forceUpdate: true);
+                Google.VersionHandler.Enabled = true;
+                AssetDatabase.Refresh();
+
+                Google.VersionHandler.InvokeStaticMethod(
+                    Google.VersionHandler.FindClass(
+                   "Google.JarResolver",
+                   "GooglePlayServices.PlayServicesResolver"),
+                   "MenuResolve", null);
             }
             return true;
         }

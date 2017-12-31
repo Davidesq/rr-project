@@ -18,7 +18,11 @@ public class Setup : MonoBehaviour {
 
     public GameObject pauseButton;
 
-    
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     void Start()
     {
         fadingCanvas = GameObject.Find("FaderCanvas(DontDestroyOnLoad)").GetComponentInChildren<CanvasRenderer>();

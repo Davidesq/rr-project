@@ -49,12 +49,42 @@ namespace GooglePlayGames.IOS {
             // not used for iOS.
         }
 
-        /// <summary>Gets the current user's email.</summary>
-        /// <returns>A string representing the email.</returns>
+
+        /// <summary>
+        /// Gets the user's email.
+        /// </summary>
+        /// <remarks>The email address returned is selected by the user from the accounts present
+        /// on the device. There is no guarantee this uniquely identifies the player.
+        /// For unique identification use the id property of the local player.
+        /// The user can also choose to not select any email address, meaning it is not
+        /// available.</remarks>
+        /// <returns>The user email or null if not authenticated or the permission is
+        /// not available.</returns>
         public string GetEmail()
         {
-            return _GooglePlayGetUserEmail();;
+            return _GooglePlayGetUserEmail();
         }
+
+        /// <summary>
+        /// Gets the user's email with a callback.
+        /// </summary>
+        /// <remarks>The email address returned is selected by the user from the accounts present
+        /// on the device. There is no guarantee this uniquely identifies the player.
+        /// For unique identification use the id property of the local player.
+        /// The user can also choose to not select any email address, meaning it is not
+        /// available.</remarks>
+        /// <param name="callback">The callback with a status code of the request,
+        /// and string which is the email. It can be null.</param>
+        public void GetEmail(Action<CommonStatusCodes, string> callback)
+        {
+            string email = GetEmail();
+            CommonStatusCodes status =
+                string.IsNullOrEmpty(email) ? CommonStatusCodes.Error : CommonStatusCodes.Success;
+            if (callback != null) {
+                callback(status, email);
+            }
+        }
+
 
         /// <summary>Gets the access token currently associated with the Unity activity.</summary>
         /// <returns>The OAuth 2.0 access token.</returns>
@@ -81,6 +111,76 @@ namespace GooglePlayGames.IOS {
             {
                 idTokenCallback(token);
             }
+        }
+
+        public string GetAuthCode()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetAnotherServerAuthCode(bool reAuthenticateIfNeeded, 
+                                             Action<string> callback)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetIdToken()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Signout()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetRequestAuthCode(bool flag, bool forceRefresh)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetRequestEmail(bool flag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetRequestIdToken(bool flag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetWebClientId(string webClientId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetAccountName(string accountName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddOauthScopes(string[] scopes)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetHidePopups(bool flag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool NeedsToRun()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FetchTokens(Action callback)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FetchTokens(Action<int> callback) {
+            throw new NotImplementedException();
         }
     }
 }

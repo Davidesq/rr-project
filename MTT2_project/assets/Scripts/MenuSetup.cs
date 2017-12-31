@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.SocialPlatforms;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using ChartboostSDK;
+//using ChartboostSDK;
 
 public class MenuSetup : MonoBehaviour {
 
@@ -14,7 +14,7 @@ public class MenuSetup : MonoBehaviour {
     void Awake()
     {
         PlayGamesPlatform.Activate();
-        Chartboost.cacheInterstitial(CBLocation.HomeScreen);
+        //Chartboost.cacheInterstitial(CBLocation.HomeScreen);
     }
 
     void Start () {
@@ -32,9 +32,9 @@ public class MenuSetup : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        if (Time.realtimeSinceStartup % 60 == 0 && SceneManager.GetActiveScene().buildIndex == 0)
+        if (Time.realtimeSinceStartup % 60 == 0 && SceneManager.GetActiveScene().buildIndex == 0) //Mostrar anuncio
         {
-            Chartboost.showInterstitial(CBLocation.HomeScreen);
+            //Chartboost.showInterstitial(CBLocation.HomeScreen);
         }
 
         if (!IsConnectedToGoogleServices)
