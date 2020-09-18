@@ -1,2 +1,2 @@
 # rr-project
-Rapid Rails Unity folder repository
+Rapid Rails Unity folder repository (deprecated)
